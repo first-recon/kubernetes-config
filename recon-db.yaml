@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recon-db
+  labels:
+    app: recon-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recon-db
+  template:
+    metadata:
+      labels:
+        app: recon-db
+    spec:
+      containers:
+      - name: recon-db
+        image: jschool/recon-db:latest
+        ports:
+        - containerPort: 5432

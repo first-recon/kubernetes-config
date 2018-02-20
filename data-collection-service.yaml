@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-collection-service
+  labels:
+    app: data-collection-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-collection-service
+  template:
+    metadata:
+      labels:
+        app: data-collection-service
+    spec:
+      containers:
+      - name: data-collection-service
+        image: jschool/data-collection-service:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
