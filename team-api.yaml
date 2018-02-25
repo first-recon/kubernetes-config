@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: events-api
+  name: team-api
   labels:
-    app: events-api
+    app: team-api
 spec:
   replicas: 1
   selector:
