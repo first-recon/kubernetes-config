@@ -17,6 +17,6 @@ spec:
       containers:
       - name: gateway-api
         image: jschool/gateway-api:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
