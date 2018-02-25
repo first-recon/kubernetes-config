@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: events-api
+  labels:
+    app: events-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: team-api
+  template:
+    metadata:
+      labels:
+        app: team-api
+    spec:
+      containers:
+      - name: team-api
+        image: jschool/team-api:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
