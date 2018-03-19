@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: matches-api
+  name: match-api
   labels:
-    app: matches-api
+    app: match-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: matches-api
+      app: match-api
   template:
     metadata:
       labels:
-        app: matches-api
+        app: match-api
     spec:
       containers:
-      - name: matches-api
-        image: jschool/matches-api:latest
+      - name: match-api
+        image: jschool/match-api:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
