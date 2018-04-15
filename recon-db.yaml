@@ -20,3 +20,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 5432
+      volumes:
+      - name: psql-vol
+        persistentVolumeClaim:
+          claimName: psql-pvc
