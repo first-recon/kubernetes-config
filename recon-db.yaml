@@ -17,5 +17,6 @@ spec:
       containers:
       - name: recon-db
         image: jschool/recon-db:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5432
