@@ -17,6 +17,6 @@ spec:
       containers:
       - name: match-api
         image: jschool/match-api:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
