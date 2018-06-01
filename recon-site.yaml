@@ -1,1 +1,22 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recon-site
+  labels:
+    app: recon-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recon-site
+  template:
+    metadata:
+      labels:
+        app: recon-site
+    spec:
+      containers:
+      - name: recon-site
+        image: jschool/recon-site:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
