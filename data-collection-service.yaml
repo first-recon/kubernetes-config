@@ -17,6 +17,6 @@ spec:
       containers:
       - name: data-collection-service
         image: jschool/data-collection-service:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
